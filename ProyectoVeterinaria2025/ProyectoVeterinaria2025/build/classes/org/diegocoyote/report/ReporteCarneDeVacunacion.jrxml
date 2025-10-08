@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteCarneDeVacunacion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ce3a81a9-cb60-4f4f-a419-c8296a2966eb">
+	<property name="ireport.zoom" value="1.7715610000000026"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="HojaMembretada" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[call sp_carnet_vacunacion()]]>
+	</queryString>
+	<field name="Vacuna" class="java.lang.String"/>
+	<field name="FechaVacunacion" class="java.sql.Date"/>
+	<field name="Veterinario" class="java.lang.String"/>
+	<field name="Mascota" class="java.lang.String"/>
+	<field name="Dueño" class="java.lang.String"/>
+	<background>
+		<band height="752">
+			<image>
+				<reportElement x="20" y="0" width="532" height="752" uuid="53c96ac8-74c7-427b-8188-e53d70cf1a43"/>
+				<imageExpression><![CDATA[$P{HojaMembretada}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="81" y="16" width="389" height="36" uuid="539c869f-2032-4ac1-af64-c1bbce516a6c"/>
+				<textElement>
+					<font fontName="SansSerif" size="22" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Carne de Vacunacion]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="33" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="10" width="40" height="20" uuid="c86d6909-9db1-46ad-807d-cfbbd0f5f783"/>
+				<text><![CDATA[Vacuna]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="10" width="100" height="20" uuid="9ca4b378-acfc-44bd-9937-f5f2a7c38888"/>
+				<text><![CDATA[FechaVacunacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="10" width="100" height="20" uuid="663ce31c-c205-4123-ab82-ba594a9c4c40"/>
+				<text><![CDATA[Veterinario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="10" width="100" height="20" uuid="11d27d68-54e2-4689-8d1e-b341caf9f567"/>
+				<text><![CDATA[Mascota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="10" width="100" height="20" uuid="ff5215ac-b9f2-4122-bb2f-04d2bff17c56"/>
+				<text><![CDATA[Dueño]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="0" width="532" height="1" uuid="6c6aaa22-4e7a-4da6-b62f-cfd3cb466aff"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="0" width="108" height="20" uuid="5080b02d-7a4d-4615-b640-d4d093c2c8ae"/>
+				<textFieldExpression><![CDATA[$F{Vacuna}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="0" width="113" height="20" uuid="c7da9e05-ce35-4f04-b555-0c25df7c33d3"/>
+				<textFieldExpression><![CDATA[$F{FechaVacunacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="0" width="100" height="20" uuid="8228ead8-0cd2-4b40-b8e5-88cd529715fc"/>
+				<textFieldExpression><![CDATA[$F{Veterinario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="0" width="100" height="20" uuid="45c3a7ef-eaa6-47eb-bc8c-6a7d9a4e86f3"/>
+				<textFieldExpression><![CDATA[$F{Mascota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="114d204b-1e9a-476c-a1db-fddee63bb7bf"/>
+				<textFieldExpression><![CDATA[$F{Dueño}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

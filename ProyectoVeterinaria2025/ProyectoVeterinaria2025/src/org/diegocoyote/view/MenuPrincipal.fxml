@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="680.0" stylesheets="@../resource/veterinariaCss.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegocoyote.controller.MenuPrincipalController">
+   <top>
+      <HBox prefHeight="117.0" prefWidth="538.0" styleClass="color2" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="117.0" prefWidth="703.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="98.0" fitWidth="98.0" layoutX="48.0" layoutY="11.0">
+                     <image>
+                        <Image url="@../image/logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="194.0" layoutY="25.0" prefHeight="68.0" prefWidth="261.0" text="Kinalito Veterinary " textFill="WHITE" AnchorPane.leftAnchor="194.0" AnchorPane.rightAnchor="225.0">
+                     <font>
+                        <Font name="Bernard MT Condensed" size="33.0" />
+                     </font>
+                  </Label>
+                  <Button alignment="CENTER_RIGHT" layoutX="455.0" layoutY="19.0" mnemonicParsing="false" onAction="#btnRedes" prefHeight="82.0" prefWidth="179.0" styleClass="buttonlogin" text="Nuestras Redes" textFill="WHITE" AnchorPane.rightAnchor="23.0">
+                     <graphic>
+                        <ImageView fitHeight="65.0" fitWidth="76.0">
+                           <image>
+                              <Image url="@../image/redes.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Bernard MT Condensed" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefHeight="517.0" prefWidth="182.0" styleClass="color3" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="btnRegresarLogin" layoutX="22.0" layoutY="247.0" mnemonicParsing="false" onAction="#btnRegresarLogin" prefHeight="49.0" prefWidth="156.0" text="Cerrar Sesion" textFill="WHITE" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="22.0">
+                     <font>
+                        <Font name="Bodoni MT Black" size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="color1" />
+                        <String fx:value="ColorRojoBrillo" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="btnApagar" layoutX="22.0" layoutY="342.0" mnemonicParsing="false" onAction="#btnApagar" prefHeight="49.0" prefWidth="156.0" text="Cerrar" textFill="WHITE">
+                     <font>
+                        <Font name="Bodoni MT Black" size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="color1" />
+                        <String fx:value="ColorRojoBrillo" />
+                     </styleClass>
+                  </Button>
+                  <ImageView fitHeight="193.0" fitWidth="182.0" layoutX="9.0" layoutY="14.0">
+                     <image>
+                        <Image url="@../image/dueñoPerro.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </right>
+   <center>
+      <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="517.0" prefWidth="408.0" BorderPane.alignment="CENTER">
+         <content>
+            <HBox prefHeight="593.0" prefWidth="478.0" styleClass="mPrincipal5">
+               <children>
+                  <VBox HBox.hgrow="ALWAYS">
+                     <children>
+                        <AnchorPane prefHeight="593.0" prefWidth="491.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Button fx:id="btnMascota" alignment="BOTTOM_CENTER" layoutX="18.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnMascota" prefHeight="73.0" prefWidth="200.0" text="Mascotas" textFill="WHITE" AnchorPane.leftAnchor="18.0">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="63.0" fitWidth="79.0" styleClass="buttons">
+                                       <image>
+                                          <Image url="@../image/huella.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnCliente" alignment="BOTTOM_CENTER" layoutX="246.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnCliente" prefHeight="73.0" prefWidth="200.0" text="Cliente" textFill="WHITE">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="63.0" fitWidth="79.0">
+                                       <image>
+                                          <Image url="@../image/dueno.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnVeterinario" alignment="BOTTOM_CENTER" layoutX="14.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnVeterinario" prefHeight="73.0" prefWidth="200.0" text="Veterinario" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="63.0" fitWidth="79.0">
+                                       <image>
+                                          <Image url="@../image/veterinario.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnProveedor" alignment="BOTTOM_CENTER" layoutX="246.0" layoutY="97.0" mnemonicParsing="false" onAction="#btnProveedor" prefHeight="73.0" prefWidth="200.0" text="Proveedor" textFill="WHITE">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="63.0" fitWidth="79.0">
+                                       <image>
+                                          <Image url="@../image/proveedor.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnVacuna" alignment="BOTTOM_CENTER" layoutX="18.0" layoutY="97.0" mnemonicParsing="false" onAction="#btnVacuna" prefHeight="73.0" prefWidth="200.0" text="Vacunas" textFill="WHITE">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="63.0" fitWidth="79.0">
+                                       <image>
+                                          <Image url="@../image/vacunas.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnEmpleado" alignment="BOTTOM_CENTER" layoutX="246.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnEmpleado" prefHeight="73.0" prefWidth="200.0" text="Empleado" textFill="WHITE">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="63.0" fitWidth="79.0">
+                                       <image>
+                                          <Image url="@../image/empleado.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnConsulta" alignment="BOTTOM_CENTER" layoutX="246.0" layoutY="267.0" mnemonicParsing="false" onAction="#btnConsulta" prefHeight="73.0" prefWidth="200.0" text="Consulta" textFill="WHITE">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="63.0" fitWidth="79.0">
+                                       <image>
+                                          <Image url="@../image/consulta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnTratamiento" alignment="BOTTOM_CENTER" layoutX="20.0" layoutY="267.0" mnemonicParsing="false" onAction="#btnTratamiento" prefHeight="73.0" prefWidth="189.0" text="Tratamiento" textFill="WHITE" AnchorPane.leftAnchor="20.0">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="63.0" fitWidth="79.0">
+                                       <image>
+                                          <Image url="@../image/tratamiento.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnVacunacion" alignment="BOTTOM_CENTER" layoutX="14.0" layoutY="447.0" mnemonicParsing="false" onAction="#btnVacunacion" prefHeight="73.0" prefWidth="200.0" text="Vacunacion" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="63.0" fitWidth="79.0">
+                                       <image>
+                                          <Image url="@../image/vacunacion.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnMedicamento" alignment="BOTTOM_CENTER" layoutX="246.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnMedicamento" prefHeight="73.0" prefWidth="200.0" text="Medicamento" textFill="WHITE">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="63.0" fitWidth="79.0">
+                                       <image>
+                                          <Image url="@../image/medicamento.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnReceta" alignment="BOTTOM_CENTER" layoutX="246.0" layoutY="447.0" mnemonicParsing="false" onAction="#btnReceta" prefHeight="73.0" prefWidth="200.0" text="Recetas" textFill="WHITE">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="63.0" fitWidth="79.0">
+                                       <image>
+                                          <Image url="@../image/receta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnFactura" alignment="BOTTOM_CENTER" layoutX="246.0" layoutY="539.0" mnemonicParsing="false" onAction="#btnFactura" prefHeight="59.0" prefWidth="200.0" text="Factura" textFill="WHITE">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="52.0" fitWidth="58.0">
+                                       <image>
+                                          <Image url="@../image/factura.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnCompra" alignment="BOTTOM_CENTER" layoutX="71.0" layoutY="539.0" mnemonicParsing="false" onAction="#btnCompra" prefHeight="32.0" prefWidth="200.0" text="Compra" textFill="WHITE" AnchorPane.rightAnchor="264.0">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="52.0" fitWidth="58.0">
+                                       <image>
+                                          <Image url="@../image/compra.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                              <Button fx:id="btnCita" alignment="BOTTOM_CENTER" layoutX="14.0" layoutY="356.0" mnemonicParsing="false" onAction="#btnCita" prefHeight="73.0" prefWidth="200.0" text="Citas" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="63.0" fitWidth="79.0">
+                                       <image>
+                                          <Image url="@../image/cita.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="buttons" />
+                                    <String fx:value="ColorAzulBrillo" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

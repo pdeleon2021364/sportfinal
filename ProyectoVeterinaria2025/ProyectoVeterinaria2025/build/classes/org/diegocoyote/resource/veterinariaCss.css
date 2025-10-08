@@ -1,0 +1,139 @@
+.imagen1{
+    -fx-background-image:  url('../image/imagen2.jpg');
+}
+
+.buttonlogin{
+    -fx-background-color: transparent;
+}
+
+.color1{
+    -fx-background-color: #d11515;
+    -fx-background-radius: 20 20 20 20;
+
+}
+
+.color2{
+    -fx-background-color: #0D47A1;
+}
+
+.color3{
+    -fx-background-color: #a9d6e9;
+}
+
+
+
+
+.fondoL{
+    -fx-background-image: url('../image/fondoLogin.jpg');
+
+}
+.mPrincipal{
+    -fx-background-image: url('../image/fondoMp.jpg');
+
+}
+
+
+.mPrincipal3{
+    -fx-background-image: url('../image/fondop1.jpg');
+
+}
+
+.mPrincipal4{
+    -fx-background-image: url('../image/fondop2.jpg');
+
+}
+
+.mPrincipal5{
+    -fx-background-image: url('../image/fondop3.jpg');
+     -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+
+}
+
+.mPrincipal6{
+    -fx-background-image: url('../image/fondoop.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+.fondoRedes{
+    -fx-background-image: url('../image/fondoR.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+
+
+
+.buttons{
+    -fx-background-color: #528fb8;
+    -fx-background-radius: 20 20 20 20;
+}
+
+.buttons2{
+    -fx-background-color: #15c63d;
+    -fx-background-radius: 20 20 20 20;
+}
+
+.fondoLogin{
+    -fx-background-image: url('../image/fondoMenuP.jpg');
+
+}
+.fondoLogin2{
+    -fx-background-color: #004d4d;
+;
+
+}
+
+.redes{
+        -fx-background-image: url('../image/redes.png');
+        
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #e6f0ff;
+}
+
+.table-row-cell:even {
+    -fx-background-color: white;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #2A73D5; 
+    -fx-text-fill: white; 
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: white; 
+}
+
+.ColorAzulBrillo:hover {
+    -fx-background-color: #3787e2;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-radius: 20 20 20 20;
+}
+
+.ColorRojoBrillo:hover {
+    -fx-background-color: #bf1010;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-radius: 20 20 20 20;
+}
+ 
+
+.ColorVerdeBrillo:hover {
+    -fx-background-color: #11bf10;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-radius: 20 20 20 20;
+}
+ 
+
+

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteReceta" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2229e9d6-9fae-4f53-b14f-55892ff7d38a">
+	<property name="ireport.zoom" value="1.4641000000000017"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="HojaMembretada" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[call sp_recetas_con_mascotas_y_medicamentos()]]>
+	</queryString>
+	<field name="Veterinario" class="java.lang.String"/>
+	<field name="Mascota" class="java.lang.String"/>
+	<field name="Medicamento" class="java.lang.String"/>
+	<field name="Dosis" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Frecuencia" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="DuracionDias" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752">
+			<image>
+				<reportElement x="20" y="0" width="532" height="752" uuid="9dfb1b26-2322-4c93-ba81-1cd821fadcde"/>
+				<imageExpression><![CDATA[$P{HojaMembretada}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="166" y="0" width="246" height="36" uuid="6af0f8fc-b334-4245-bebf-ff535f4d62c9"/>
+				<textElement>
+					<font fontName="SansSerif" size="22" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de Recetas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="12" width="58" height="20" uuid="4677543d-9d0a-44a3-8981-95b03b868f48"/>
+				<text><![CDATA[Veterinario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="12" width="43" height="20" uuid="f8e13e33-d094-44db-88e1-6cb62c7b3a5e"/>
+				<text><![CDATA[Mascota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="142" y="12" width="71" height="20" uuid="6a9690e0-aba7-475e-a381-3bf8199d9b6e"/>
+				<text><![CDATA[Medicamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="12" width="29" height="20" uuid="145e767e-41f1-4397-ab4d-d70f18efc48f"/>
+				<text><![CDATA[Dosis]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="12" width="59" height="20" uuid="c04fe870-d56a-4ec1-b0a4-e8bd860e4010"/>
+				<text><![CDATA[Frecuencia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="434" y="12" width="100" height="20" uuid="907a0eed-77e3-45c6-9a17-1535c53516be"/>
+				<text><![CDATA[DuracionDias]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="0" width="524" height="1" uuid="05f6ef6a-0f3c-4bcf-8e47-f586490ab6d8"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="2" width="71" height="20" uuid="ae8e7764-971d-4cd2-be86-6b3855a33e9c"/>
+				<textFieldExpression><![CDATA[$F{Veterinario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="2" width="43" height="20" uuid="414989c8-eba9-46a0-8478-b82344aa9379"/>
+				<textFieldExpression><![CDATA[$F{Mascota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="142" y="0" width="87" height="20" uuid="b8703ba2-3278-4afc-b9a8-9ccd101a874d"/>
+				<textFieldExpression><![CDATA[$F{Medicamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="2" width="97" height="20" uuid="6dc824e5-25bb-476f-a2ed-912b76f6a7c2"/>
+				<textFieldExpression><![CDATA[$F{Dosis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="338" y="0" width="74" height="20" uuid="5f93fe28-3eee-48dc-8ed4-a49cdf7abfb4"/>
+				<textFieldExpression><![CDATA[$F{Frecuencia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="2" width="100" height="20" uuid="f589662c-e86e-4335-bec8-68d207fb7282"/>
+				<textFieldExpression><![CDATA[$F{DuracionDias}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

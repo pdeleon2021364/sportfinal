@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="fondoRedes" stylesheets="@../resource/veterinariaCss.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegocoyote.controller.RedesController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="601.0" styleClass="fondoLogin" stylesheets="@../resource/veterinariaCss.css">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="57.0" layoutX="284.0" layoutY="294.0">
+               <image>
+                  <Image url="@../image/facebook.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="59.0" fitWidth="57.0" layoutX="285.0" layoutY="134.0">
+               <image>
+                  <Image url="@../image/ig.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="52.0" fitWidth="57.0" layoutX="284.0" layoutY="222.0">
+               <image>
+                  <Image url="@../image/x.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="80.0" layoutX="273.0" layoutY="57.0">
+               <image>
+                  <Image url="@../image/whatsapp.png" />
+               </image>
+            </ImageView>
+            <Hyperlink layoutX="356.0" layoutY="312.0" text="https://www.facebook.com/" textFill="#0340d0" />
+            <Hyperlink layoutX="348.0" layoutY="152.0" text="https://www.instagram.com/" textFill="#0340d0" />
+            <Hyperlink layoutX="352.0" layoutY="225.0" text="https://x.com/?lang=es" textFill="#0340d0" />
+            <Text fill="WHITE" layoutX="368.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="45896585">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="26.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kinalito Veterinary Redes" wrappingWidth="419.40625">
+               <font>
+                  <Font name="Arial Black" size="32.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="226.0" fitWidth="211.0" layoutX="14.0" layoutY="105.0">
+               <image>
+                  <Image url="@../image/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="41.0" fitWidth="35.0" layoutX="541.0" layoutY="14.0">
+               <image>
+                  <Image url="@../image/atras.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnRegresar" layoutX="530.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnRegresar" prefHeight="59.0" prefWidth="57.0" styleClass="buttonlogin" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>

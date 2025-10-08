@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="600.0" stylesheets="@../resource/veterinariaCss.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegocoyote.controller.ActualizarclController">
+   <content>
+      <HBox prefHeight="726.0" prefWidth="601.0">
+         <children>
+            <VBox prefHeight="726.0" prefWidth="420.0" styleClass="mPrincipal6">
+               <children>
+                  <AnchorPane prefHeight="726.0" prefWidth="403.0">
+                     <children>
+                        <Text layoutX="147.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuevo nombre" wrappingWidth="100.845703125">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="99.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuevo Apellido" wrappingWidth="73.845703125">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="120.0" layoutY="100.0" />
+                        <TextField layoutX="99.0" layoutY="181.0" />
+                        <Text layoutX="99.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuevo Telefono" wrappingWidth="73.845703125">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="99.0" layoutY="260.0" />
+                        <Text layoutX="99.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nueva Direccion" wrappingWidth="73.845703125">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="99.0" layoutY="345.0" />
+                        <Text layoutX="98.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuevo Email" wrappingWidth="177.845703125">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="98.0" layoutY="432.0" />
+                        <Text layoutX="98.0" layoutY="491.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nueva Fecha de Registro" wrappingWidth="138.845703125">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="99.0" layoutY="525.0" />
+                        <ImageView fitHeight="85.0" fitWidth="99.0" layoutX="285.0" layoutY="151.0">
+                           <image>
+                              <Image url="@../image/dueñoPerro.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="289.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¿Quien es El dueño (id)?" wrappingWidth="115.93505859375">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField layoutX="278.0" layoutY="248.0" prefHeight="25.0" prefWidth="114.0" />
+                        <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="23.0" layoutY="21.0">
+                           <image>
+                              <Image url="@../image/atras.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btnRegresar" layoutX="13.0" layoutY="16.0" mnemonicParsing="false" onAction="#btnRegresar" prefHeight="48.0" prefWidth="60.0" styleClass="buttonlogin" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="726.0" prefWidth="186.0" styleClass="buttons">
+               <children>
+                  <ImageView fitHeight="713.0" fitWidth="169.0" layoutX="-2.0">
+                     <image>
+                        <Image url="@../image/dueñoPerro.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </content>
+</ScrollPane>

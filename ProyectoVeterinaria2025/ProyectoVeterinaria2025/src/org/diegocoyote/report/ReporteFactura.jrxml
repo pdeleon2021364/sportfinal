@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteFactura" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5cc5b4b8-960a-417e-9fd0-85eb147666d0">
+	<property name="ireport.zoom" value="1.3310000000000015"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codigoFactura" class="java.lang.Integer"/>
+	<parameter name="HojaMembretada" class="java.io.InputStream"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\informatica\\Documents\\ProyectoVeterinaria2025\\src\\org\\diegocoyote\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SubCliente" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="SubEmpleado" class="net.sf.jasperreports.engine.JasperReport"/>
+	<queryString>
+		<![CDATA[call sp_facturas_con_mascotas($P{codigoFactura})]]>
+	</queryString>
+	<field name="CodigoFactura" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Fecha" class="java.sql.Date"/>
+	<field name="Total" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="MetodoPago" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Empleado" class="java.lang.String"/>
+	<field name="Cliente" class="java.lang.String"/>
+	<field name="Mascota" class="java.lang.String"/>
+	<field name="CodigoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CodigoEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752">
+			<image>
+				<reportElement x="20" y="0" width="532" height="752" uuid="502b1f04-dc31-4ad8-992c-0b12b53eabc0"/>
+				<imageExpression><![CDATA[$P{HojaMembretada}]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="76">
+			<staticText>
+				<reportElement x="0" y="0" width="142" height="31" uuid="8b857f30-2736-40a3-9f11-d9a24623400c"/>
+				<textElement>
+					<font fontName="SansSerif" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="31" width="82" height="16" uuid="82f463df-1ac8-4412-b78b-e38c9e638644"/>
+				<textElement>
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<text><![CDATA[Colonia Landivar ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="47" width="82" height="16" uuid="286fb7af-51a3-4b82-ae6e-e7f0c0cbad94"/>
+				<textElement>
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<text><![CDATA[35760414, Fundacion Kinal ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="242" height="35" uuid="b6691387-a700-431a-bbfb-e9255db9afe5"/>
+				<subreportParameter name="codigoC">
+					<subreportParameterExpression><![CDATA[$P{codigoFactura}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SubCliente}]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="268" y="-1" width="304" height="36" uuid="c9279c03-7ee2-4038-81fa-1bbe7e81ae36"/>
+				<subreportParameter name="codigoEmp">
+					<subreportParameterExpression><![CDATA[$P{codigoFactura}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SubEmpleado}]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="10" width="88" height="20" uuid="9dc5299b-c3ae-44a3-86d3-9c002a098d76"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CodigoFactura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="98" y="10" width="32" height="20" uuid="2eb77109-4dd8-4c7e-822c-a58486e206cc"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="10" width="27" height="20" uuid="4bfc5e3f-8163-483f-be9a-154f7755d182"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="242" y="10" width="66" height="20" uuid="a68a6366-31e6-490d-9736-59f640536475"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MetodoPago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="323" y="10" width="100" height="20" uuid="6d361da9-bff6-4e5b-9e02-c2726bcba2b1"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CodigoCliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="10" width="100" height="20" uuid="497a5681-91b7-422a-8cc4-bc1aac966e16"/>
+				<textElement>
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CodigoEmpleado]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="4" width="542" height="1" uuid="e8a8c48c-4960-4185-9690-1e3a3c97a411"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="1" width="32" height="20" uuid="96e24adf-b9c4-4496-8695-b417e7a15157"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CodigoFactura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="172" y="1" width="51" height="20" uuid="43b8990b-d12b-4275-bde1-f5cd7488f3a6"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="242" y="1" width="66" height="20" uuid="0433980c-38df-4e35-951c-3e0bdc596b87"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{MetodoPago}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="1" width="83" height="20" uuid="d16eed7e-1ea7-4d5f-bcd1-8a1b65408f63"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="323" y="0" width="100" height="20" uuid="70d912ca-277e-4f0b-a1f6-54ffba3c344d"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CodigoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="1" width="100" height="20" uuid="b9f27a31-361d-45b5-a655-6e274583d8a5"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CodigoEmpleado}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="46" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="342" y="0" width="199" height="25" uuid="f5e9376b-4ada-46b7-9975-f0c69c254c82"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Condiciones del Pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="25" width="199" height="10" uuid="d5e7a649-f1b8-4209-806c-d916d0f10e02"/>
+				<textElement>
+					<font fontName="SansSerif" size="6"/>
+				</textElement>
+				<text><![CDATA[El pago se realizara dentro de un  plazo de 15 dias ]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
